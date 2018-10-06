@@ -77,12 +77,10 @@
 		90DA60E42168F37100532646 /* ClassQuote */ = {
 			isa = PBXGroup;
 			children = (
-				90DA60E52168F37100532646 /* AppDelegate.swift */,
-				90DA60E72168F37100532646 /* ViewController.swift */,
-				90DA60E92168F37100532646 /* Main.storyboard */,
-				90DA60EC2168F37100532646 /* Assets.xcassets */,
-				90DA60EE2168F37100532646 /* LaunchScreen.storyboard */,
 				90DA60F12168F37100532646 /* Info.plist */,
+				90DA61062168F57200532646 /* Controller */,
+				90DA61052168F56700532646 /* View */,
+				90DA61072168F5F200532646 /* Supporting Files */,
 			);
 			path = ClassQuote;
 			sourceTree = "<group>";
@@ -94,6 +92,32 @@
 				90DA60FC2168F37100532646 /* Info.plist */,
 			);
 			path = ClassQuoteTests;
+			sourceTree = "<group>";
+		};
+		90DA61052168F56700532646 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				90DA60E92168F37100532646 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		90DA61062168F57200532646 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				90DA60E72168F37100532646 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		90DA61072168F5F200532646 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				90DA60E52168F37100532646 /* AppDelegate.swift */,
+				90DA60EC2168F37100532646 /* Assets.xcassets */,
+				90DA60EE2168F37100532646 /* LaunchScreen.storyboard */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -370,7 +394,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = fr.t8lv4.ClassQuote;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -388,7 +412,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = fr.t8lv4.ClassQuote;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
