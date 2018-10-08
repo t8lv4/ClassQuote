@@ -18,7 +18,7 @@ class ViewController: UIViewController {
 
 
     @IBAction func tappedNewQuoteButton(_ sender: Any) {
-        QuoteService.getQuote { (success, quote) in
+        QuoteService.shared.getQuote { (success, quote) in
             if success, let quote = quote {
                 self.update(quote: quote)
             } else {
