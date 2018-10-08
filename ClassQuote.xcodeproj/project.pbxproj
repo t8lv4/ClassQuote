@@ -8,17 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		90320D38216B3B050040996F /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90320D37216B3B050040996F /* Quote.swift */; };
+		90320D48216B82600040996F /* QuoteServiceTestsCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90320D47216B82600040996F /* QuoteServiceTestsCase.swift */; };
 		90DA60E62168F37100532646 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90DA60E52168F37100532646 /* AppDelegate.swift */; };
 		90DA60E82168F37100532646 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90DA60E72168F37100532646 /* ViewController.swift */; };
 		90DA60EB2168F37100532646 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90DA60E92168F37100532646 /* Main.storyboard */; };
 		90DA60ED2168F37100532646 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90DA60EC2168F37100532646 /* Assets.xcassets */; };
 		90DA60F02168F37100532646 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90DA60EE2168F37100532646 /* LaunchScreen.storyboard */; };
-		90DA60FB2168F37100532646 /* ClassQuoteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90DA60FA2168F37100532646 /* ClassQuoteTests.swift */; };
 		90DA610D2169060400532646 /* QuoteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90DA610C2169060400532646 /* QuoteService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		90DA60F72168F37100532646 /* PBXContainerItemProxy */ = {
+		90320D42216B82150040996F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 90DA60DA2168F37100532646 /* Project object */;
 			proxyType = 1;
@@ -29,6 +29,9 @@
 
 /* Begin PBXFileReference section */
 		90320D37216B3B050040996F /* Quote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
+		90320D3D216B82150040996F /* QuoteServiceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuoteServiceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		90320D41216B82150040996F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		90320D47216B82600040996F /* QuoteServiceTestsCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteServiceTestsCase.swift; sourceTree = "<group>"; };
 		90DA60E22168F37100532646 /* ClassQuote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClassQuote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		90DA60E52168F37100532646 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		90DA60E72168F37100532646 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -36,21 +39,18 @@
 		90DA60EC2168F37100532646 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		90DA60EF2168F37100532646 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		90DA60F12168F37100532646 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		90DA60F62168F37100532646 /* ClassQuoteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClassQuoteTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		90DA60FA2168F37100532646 /* ClassQuoteTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassQuoteTests.swift; sourceTree = "<group>"; };
-		90DA60FC2168F37100532646 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		90DA610C2169060400532646 /* QuoteService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		90DA60DF2168F37100532646 /* Frameworks */ = {
+		90320D3A216B82150040996F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		90DA60F32168F37100532646 /* Frameworks */ = {
+		90DA60DF2168F37100532646 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -60,11 +60,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		90320D3E216B82150040996F /* QuoteServiceTests */ = {
+			isa = PBXGroup;
+			children = (
+				90320D41216B82150040996F /* Info.plist */,
+				90320D47216B82600040996F /* QuoteServiceTestsCase.swift */,
+			);
+			path = QuoteServiceTests;
+			sourceTree = "<group>";
+		};
 		90DA60D92168F37100532646 = {
 			isa = PBXGroup;
 			children = (
 				90DA60E42168F37100532646 /* ClassQuote */,
-				90DA60F92168F37100532646 /* ClassQuoteTests */,
+				90320D3E216B82150040996F /* QuoteServiceTests */,
 				90DA60E32168F37100532646 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -73,7 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				90DA60E22168F37100532646 /* ClassQuote.app */,
-				90DA60F62168F37100532646 /* ClassQuoteTests.xctest */,
+				90320D3D216B82150040996F /* QuoteServiceTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -89,15 +98,6 @@
 				90DA61072168F5F200532646 /* Supporting Files */,
 			);
 			path = ClassQuote;
-			sourceTree = "<group>";
-		};
-		90DA60F92168F37100532646 /* ClassQuoteTests */ = {
-			isa = PBXGroup;
-			children = (
-				90DA60FA2168F37100532646 /* ClassQuoteTests.swift */,
-				90DA60FC2168F37100532646 /* Info.plist */,
-			);
-			path = ClassQuoteTests;
 			sourceTree = "<group>";
 		};
 		90DA61052168F56700532646 /* View */ = {
@@ -129,6 +129,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		90320D3C216B82150040996F /* QuoteServiceTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 90320D44216B82150040996F /* Build configuration list for PBXNativeTarget "QuoteServiceTests" */;
+			buildPhases = (
+				90320D39216B82150040996F /* Sources */,
+				90320D3A216B82150040996F /* Frameworks */,
+				90320D3B216B82150040996F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				90320D43216B82150040996F /* PBXTargetDependency */,
+			);
+			name = QuoteServiceTests;
+			productName = QuoteServiceTests;
+			productReference = 90320D3D216B82150040996F /* QuoteServiceTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		90DA60E12168F37100532646 /* ClassQuote */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 90DA60FF2168F37100532646 /* Build configuration list for PBXNativeTarget "ClassQuote" */;
@@ -146,24 +164,6 @@
 			productReference = 90DA60E22168F37100532646 /* ClassQuote.app */;
 			productType = "com.apple.product-type.application";
 		};
-		90DA60F52168F37100532646 /* ClassQuoteTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 90DA61022168F37100532646 /* Build configuration list for PBXNativeTarget "ClassQuoteTests" */;
-			buildPhases = (
-				90DA60F22168F37100532646 /* Sources */,
-				90DA60F32168F37100532646 /* Frameworks */,
-				90DA60F42168F37100532646 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				90DA60F82168F37100532646 /* PBXTargetDependency */,
-			);
-			name = ClassQuoteTests;
-			productName = ClassQuoteTests;
-			productReference = 90DA60F62168F37100532646 /* ClassQuoteTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -174,12 +174,13 @@
 				LastUpgradeCheck = 1000;
 				ORGANIZATIONNAME = Morgan;
 				TargetAttributes = {
+					90320D3C216B82150040996F = {
+						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1000;
+						TestTargetID = 90DA60E12168F37100532646;
+					};
 					90DA60E12168F37100532646 = {
 						CreatedOnToolsVersion = 10.0;
-					};
-					90DA60F52168F37100532646 = {
-						CreatedOnToolsVersion = 10.0;
-						TestTargetID = 90DA60E12168F37100532646;
 					};
 				};
 			};
@@ -197,12 +198,19 @@
 			projectRoot = "";
 			targets = (
 				90DA60E12168F37100532646 /* ClassQuote */,
-				90DA60F52168F37100532646 /* ClassQuoteTests */,
+				90320D3C216B82150040996F /* QuoteServiceTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		90320D3B216B82150040996F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		90DA60E02168F37100532646 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -213,16 +221,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		90DA60F42168F37100532646 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		90320D39216B82150040996F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				90320D48216B82600040996F /* QuoteServiceTestsCase.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		90DA60DE2168F37100532646 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -234,21 +243,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		90DA60F22168F37100532646 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				90DA60FB2168F37100532646 /* ClassQuoteTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		90DA60F82168F37100532646 /* PBXTargetDependency */ = {
+		90320D43216B82150040996F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 90DA60E12168F37100532646 /* ClassQuote */;
-			targetProxy = 90DA60F72168F37100532646 /* PBXContainerItemProxy */;
+			targetProxy = 90320D42216B82150040996F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -272,6 +273,49 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		90320D45216B82150040996F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9T22T3H63N;
+				INFOPLIST_FILE = QuoteServiceTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = fr.t8lv4.QuoteServiceTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ClassQuote.app/ClassQuote";
+			};
+			name = Debug;
+		};
+		90320D46216B82150040996F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9T22T3H63N;
+				INFOPLIST_FILE = QuoteServiceTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = fr.t8lv4.QuoteServiceTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ClassQuote.app/ClassQuote";
+			};
+			name = Release;
+		};
 		90DA60FD2168F37100532646 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -424,51 +468,18 @@
 			};
 			name = Release;
 		};
-		90DA61032168F37100532646 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9T22T3H63N;
-				INFOPLIST_FILE = ClassQuoteTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = fr.t8lv4.ClassQuoteTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ClassQuote.app/ClassQuote";
-			};
-			name = Debug;
-		};
-		90DA61042168F37100532646 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9T22T3H63N;
-				INFOPLIST_FILE = ClassQuoteTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = fr.t8lv4.ClassQuoteTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ClassQuote.app/ClassQuote";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		90320D44216B82150040996F /* Build configuration list for PBXNativeTarget "QuoteServiceTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				90320D45216B82150040996F /* Debug */,
+				90320D46216B82150040996F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		90DA60DD2168F37100532646 /* Build configuration list for PBXProject "ClassQuote" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -483,15 +494,6 @@
 			buildConfigurations = (
 				90DA61002168F37100532646 /* Debug */,
 				90DA61012168F37100532646 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		90DA61022168F37100532646 /* Build configuration list for PBXNativeTarget "ClassQuoteTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				90DA61032168F37100532646 /* Debug */,
-				90DA61042168F37100532646 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
