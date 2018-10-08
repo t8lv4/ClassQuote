@@ -18,13 +18,21 @@ class ViewController: UIViewController {
 
 
     @IBAction func tappedNewQuoteButton(_ sender: Any) {
+        toggleActivityIndicator(shown: true)
         QuoteService.shared.getQuote { (success, quote) in
+            self.toggleActivityIndicator(shown: false)
+
             if success, let quote = quote {
                 self.update(quote: quote)
             } else {
                self.presentAlert()
             }
         }
+    }
+
+    private func toggleActivityIndicator(shown: Bool) {
+        activityIndicator.isHidden = !shown
+        newQuoteButton.isHidden = shown
     }
 
     private func update(quote: Quote) {
