@@ -55,8 +55,11 @@
                                 <state key="normal" title="New Quote">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="tappedNewQuoteButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="W6q-Pw-xfP"/>
+                                </connections>
                             </button>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="3aZ-xe-eVF">
+                            <activityIndicatorView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="3aZ-xe-eVF">
                                 <rect key="frame" x="169" y="592" width="37" height="37"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="37" id="Jcc-FN-A5j"/>
@@ -84,6 +87,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="3aZ-xe-eVF" id="VvK-Q7-Ux1"/>
+                        <outlet property="authorLabel" destination="ned-t9-EiC" id="RLo-Ga-HQD"/>
+                        <outlet property="imageView" destination="GtB-Yg-xyn" id="avm-qp-Sdl"/>
+                        <outlet property="newQuoteButton" destination="e1a-BG-Mlt" id="Hvk-iw-mx3"/>
+                        <outlet property="quoteLabel" destination="y4J-xU-TE8" id="ffY-nc-xyS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

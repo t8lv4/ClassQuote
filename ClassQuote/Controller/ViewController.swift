@@ -10,11 +10,15 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var quoteLabel: UILabel!
+    @IBOutlet weak var authorLabel: UILabel!
+    @IBOutlet weak var newQuoteButton: UIButton!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+
+
+    @IBAction func tappedNewQuoteButton(_ sender: Any) {
+        QuoteService.getQuote()
     }
-
-
 }
 
