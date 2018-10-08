@@ -12,29 +12,38 @@ class QuoteService {
     private static let quoteURL = URL(string: "https://api.forismatic.com/api/1.0/")!
     private static let pictureURL = URL(string: "https://source.unsplash.com/random/1000x1000")!
 
-    static func getQuote() {
+    static func getQuote(callback: @escaping (Bool, Quote?) -> Void) {
         //create request
         let request = createQuoteRequest()
         //create session call
         let session = URLSession(configuration: .default)
         //create task for the session
         let task = session.dataTask(with: request) { (data, response, error) in
-            //handle response
-            //check error
-            if let data = data, error == nil {
-                //check response
-                if let response = response as? HTTPURLResponse, response.statusCode == 200 {
-                    //decode response
-                    if let responseJSON = try? JSONDecoder().decode([String: String].self, from: data),
-                        let text = responseJSON["quoteText"], let author = responseJSON["quoteAuthor"] {
-                        getImage(completionHandler: { (data) in
-                            if let data = data {
-                                print(data)
-                                print(text)
-                                print(author)
+            DispatchQueue.main.async {
+                //handle response
+                //check error
+                if let data = data, error == nil {
+                    //check response
+                    if let response = response as? HTTPURLResponse, response.statusCode == 200 {
+                        //decode response
+                        if let responseJSON = try? JSONDecoder().decode([String: String].self, from: data),
+                            let text = responseJSON["quoteText"], let author = responseJSON["quoteAuthor"] {
+                            getImage { (data) in
+                                if let data = data {
+                                    let quote = Quote(text: text, author: author, imageData: data)
+                                    callback(true, quote)
+                                } else {
+                                    callback(false, nil)
+                                }
                             }
-                        })
+                        } else {
+                            callback(false, nil)
+                        }
+                    } else {
+                        callback(false, nil)
                     }
+                } else {
+                    callback(false, nil)
                 }
             }
         }
@@ -59,9 +68,15 @@ class QuoteService {
     private static func getImage(completionHandler: @escaping ((Data?) -> Void)) {
         let session = URLSession(configuration: .default)
         let task = session.dataTask(with: pictureURL) { (data, response, error) in
-            if let data = data, error == nil {
-                if let response = response as? HTTPURLResponse, response.statusCode == 200 {
-                    completionHandler(data)
+            DispatchQueue.main.async {
+                if let data = data, error == nil {
+                    if let response = response as? HTTPURLResponse, response.statusCode == 200 {
+                        completionHandler(data)
+                    } else {
+                        completionHandler(nil)
+                    }
+                } else {
+                    completionHandler(nil)
                 }
             }
         }
