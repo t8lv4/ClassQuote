@@ -29,28 +29,28 @@ class QuoteService {
             DispatchQueue.main.async {
                 //handle response
                 //check error
-                if let data = data, error == nil {
-                    //check response
-                    if let response = response as? HTTPURLResponse, response.statusCode == 200 {
-                        //decode response
-                        if let responseJSON = try? JSONDecoder().decode([String: String].self, from: data),
-                            let text = responseJSON["quoteText"], let author = responseJSON["quoteAuthor"] {
-                            self.getImage { (data) in
-                                if let data = data {
-                                    let quote = Quote(text: text, author: author, imageData: data)
-                                    callback(true, quote)
-                                } else {
-                                    callback(false, nil)
-                                }
-                            }
-                        } else {
-                            callback(false, nil)
-                        }
+                guard let data = data, error == nil else {
+                    callback(false, nil)
+                    return
+                }
+                //check response
+                guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
+                    callback(false, nil)
+                    return
+                }
+                //decode response
+                guard let responseJSON = try? JSONDecoder().decode([String: String].self, from: data),
+                    let text = responseJSON["quoteText"], let author = responseJSON["quoteAuthor"] else {
+                        callback(false, nil)
+                        return
+                }
+                self.getImage { (data) in
+                    if let data = data {
+                        let quote = Quote(text: text, author: author, imageData: data)
+                        callback(true, quote)
                     } else {
                         callback(false, nil)
                     }
-                } else {
-                    callback(false, nil)
                 }
             }
         }
@@ -78,15 +78,15 @@ class QuoteService {
         
         task = session.dataTask(with: QuoteService.pictureURL) { (data, response, error) in
             DispatchQueue.main.async {
-                if let data = data, error == nil {
-                    if let response = response as? HTTPURLResponse, response.statusCode == 200 {
-                        completionHandler(data)
-                    } else {
-                        completionHandler(nil)
-                    }
-                } else {
+                guard let data = data, error == nil else {
                     completionHandler(nil)
+                    return
                 }
+                guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
+                    completionHandler(nil)
+                    return
+                }
+                completionHandler(data)
             }
         }
         task?.resume()
