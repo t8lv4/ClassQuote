@@ -17,6 +17,7 @@
 		90DA60ED2168F37100532646 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90DA60EC2168F37100532646 /* Assets.xcassets */; };
 		90DA60F02168F37100532646 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90DA60EE2168F37100532646 /* LaunchScreen.storyboard */; };
 		90DA610D2169060400532646 /* QuoteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90DA610C2169060400532646 /* QuoteService.swift */; };
+		90E66CF4216D01AE00686B2D /* URLSessionFake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E66CF3216D01AE00686B2D /* URLSessionFake.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		90DA60EF2168F37100532646 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		90DA60F12168F37100532646 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		90DA610C2169060400532646 /* QuoteService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteService.swift; sourceTree = "<group>"; };
+		90E66CF3216D01AE00686B2D /* URLSessionFake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionFake.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 				90320D47216B82600040996F /* QuoteServiceTestsCase.swift */,
 				90320D49216BB0A30040996F /* Quote.json */,
 				90320D4B216BB0FE0040996F /* FakeResponseData.swift */,
+				90E66CF3216D01AE00686B2D /* URLSessionFake.swift */,
 			);
 			path = QuoteServiceTests;
 			sourceTree = "<group>";
@@ -236,6 +239,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				90320D48216B82600040996F /* QuoteServiceTestsCase.swift in Sources */,
+				90E66CF4216D01AE00686B2D /* URLSessionFake.swift in Sources */,
 				90320D4C216BB0FE0040996F /* FakeResponseData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

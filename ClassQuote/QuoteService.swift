@@ -17,15 +17,21 @@ class QuoteService {
     private static let pictureURL = URL(string: "https://source.unsplash.com/random/1000x1000")!
     private var task: URLSessionDataTask?
 
+    //dependency injection
+    private var quoteSession = URLSession(configuration: .default)
+    private var imageSession = URLSession(configuration: .default)
+    init(quoteSession: URLSession, imageSession: URLSession) {
+        self.quoteSession = quoteSession
+        self.imageSession = imageSession
+    }
+
     func getQuote(callback: @escaping (Bool, Quote?) -> Void) {
         //create request
         let request = QuoteService.createQuoteRequest()
-        //create session call
-        let session = URLSession(configuration: .default)
 
         task?.cancel()
         //create task for the session
-        task = session.dataTask(with: request) { (data, response, error) in
+        task = quoteSession.dataTask(with: request) { (data, response, error) in
             DispatchQueue.main.async {
                 //handle response
                 //check error
@@ -73,10 +79,9 @@ class QuoteService {
     }
 
     private func getImage(completionHandler: @escaping ((Data?) -> Void)) {
-        let session = URLSession(configuration: .default)
         task?.cancel()
         
-        task = session.dataTask(with: QuoteService.pictureURL) { (data, response, error) in
+        task = imageSession.dataTask(with: QuoteService.pictureURL) { (data, response, error) in
             DispatchQueue.main.async {
                 guard let data = data, error == nil else {
                     completionHandler(nil)
