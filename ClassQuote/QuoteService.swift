@@ -39,7 +39,7 @@ class QuoteService {
                     callback(false, nil)
                     return
                 }
-                //check response
+                //check HTTP status
                 guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
                     callback(false, nil)
                     return
@@ -50,6 +50,7 @@ class QuoteService {
                         callback(false, nil)
                         return
                 }
+                //call a task to get an image
                 self.getImage { (data) in
                     if let data = data {
                         let quote = Quote(text: text, author: author, imageData: data)

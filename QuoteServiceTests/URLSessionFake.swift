@@ -8,7 +8,9 @@
 
 import Foundation
 
+// double URLSession to adress the test of dataTask(with url:...) and dataTask(with request:...)
 class URLSessionFake: URLSession {
+    //ocmpletion handler properties
     var data: Data?
     var response: URLResponse?
     var error: Error?
@@ -38,6 +40,7 @@ class URLSessionFake: URLSession {
     }
 }
 
+// double URLSessionDataTask to adress the tests of resume() and cancel()
 class URLSessionDataTaskFake: URLSessionDataTask {
     var completionHandler: ((Data?, URLResponse?, Error?) -> Void)?
     var data: Data?

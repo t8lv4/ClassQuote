@@ -8,30 +8,35 @@
 
 import Foundation
 
+// simulate fake responses to a call from a server
+// structure follows parameters data, response, error of the completion handler closure :
+// task = session.dataTask(with: request) { (data, response, error) in ... see QuoteService
 class FakeResponseData {
-    //create responses
-    let reponseOK = HTTPURLResponse(url: URL(string: "https://t8lv4.fr")!, statusCode: 200, httpVersion: nil, headerFields: nil)!
-    let reponseKO = HTTPURLResponse(url: URL(string: "https://t8lv4.fr")!, statusCode: 500, httpVersion: nil, headerFields: nil)!
-
-
-    //get forismatic data from Quote.json
-    var quoteCorrectData: Data {
-        //get Quote.json bundle
+    // MARK: - Data
+    // get data from Quote.json
+    static var quoteCorrectData: Data? {
         let bundle = Bundle(for: FakeResponseData.self)
-        //get path to Quote.json
-        let url = bundle.url(forResource: "Quote", withExtension: "json")
-        //get contents of Quote.json
-        let data = try! Data(contentsOf: url!)
-
-        return data
+        let url = bundle.url(forResource: "Quote", withExtension: "json")!
+        return try! Data(contentsOf: url)
     }
 
-    //create incorrect data format by encoding a string
-    let quoteIncorrectData = "error".data(using: .utf8)!
-    let imageData = "image".data(using: .utf8)!
+    // simulate invalid data
+    static let quoteIncorrectData = "erreur".data(using: .utf8)!
+    static let imageData = "image".data(using: .utf8)!
 
-    //to simulate if there's an error or not
+    // MARK: - Response
+    // simulate HTTP status codes
+    static let responseOK = HTTPURLResponse(
+        url: URL(string: "https://openclassrooms.com")!,
+        statusCode: 200, httpVersion: nil, headerFields: [:])!
+
+    static let responseKO = HTTPURLResponse(
+        url: URL(string: "https://openclassrooms.com")!,
+        statusCode: 500, httpVersion: nil, headerFields: [:])!
+
+
+    // MARK: - Error
     class QuoteError: Error {}
-    let error = QuoteError()
-
+    static let error = QuoteError()
 }
+
