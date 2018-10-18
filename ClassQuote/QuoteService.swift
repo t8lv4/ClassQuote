@@ -73,7 +73,7 @@ class QuoteService {
 
         //create body
         let body = "method=getQuote&format=json&lang=en"
-        //attach body to request and specifie format of the datas to be sent
+        //attach body to request and specifie the format of the data to be sent
         request.httpBody = body.data(using: .utf8)
 
         return request

@@ -11,6 +11,8 @@
 		90320D48216B82600040996F /* QuoteServiceTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90320D47216B82600040996F /* QuoteServiceTestCase.swift */; };
 		90320D4A216BB0A30040996F /* Quote.json in Resources */ = {isa = PBXBuildFile; fileRef = 90320D49216BB0A30040996F /* Quote.json */; };
 		90320D4C216BB0FE0040996F /* FakeResponseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90320D4B216BB0FE0040996F /* FakeResponseData.swift */; };
+		90D3A3DF2178C05F0096C895 /* PlayfairDisplay-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 90D3A3DE2178C05F0096C895 /* PlayfairDisplay-Regular.otf */; };
+		90D3A3E02178C05F0096C895 /* PlayfairDisplay-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 90D3A3DE2178C05F0096C895 /* PlayfairDisplay-Regular.otf */; };
 		90DA60E62168F37100532646 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90DA60E52168F37100532646 /* AppDelegate.swift */; };
 		90DA60E82168F37100532646 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90DA60E72168F37100532646 /* ViewController.swift */; };
 		90DA60EB2168F37100532646 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90DA60E92168F37100532646 /* Main.storyboard */; };
@@ -37,6 +39,7 @@
 		90320D47216B82600040996F /* QuoteServiceTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteServiceTestCase.swift; sourceTree = "<group>"; };
 		90320D49216BB0A30040996F /* Quote.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Quote.json; sourceTree = "<group>"; };
 		90320D4B216BB0FE0040996F /* FakeResponseData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeResponseData.swift; sourceTree = "<group>"; };
+		90D3A3DE2178C05F0096C895 /* PlayfairDisplay-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PlayfairDisplay-Regular.otf"; sourceTree = "<group>"; };
 		90DA60E22168F37100532646 /* ClassQuote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClassQuote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		90DA60E52168F37100532646 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		90DA60E72168F37100532646 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -130,6 +133,7 @@
 			children = (
 				90DA60E52168F37100532646 /* AppDelegate.swift */,
 				90DA60EC2168F37100532646 /* Assets.xcassets */,
+				90D3A3DE2178C05F0096C895 /* PlayfairDisplay-Regular.otf */,
 				90DA60EE2168F37100532646 /* LaunchScreen.storyboard */,
 			);
 			path = "Supporting Files";
@@ -218,6 +222,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				90320D4A216BB0A30040996F /* Quote.json in Resources */,
+				90D3A3E02178C05F0096C895 /* PlayfairDisplay-Regular.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -228,6 +233,7 @@
 				90DA60F02168F37100532646 /* LaunchScreen.storyboard in Resources */,
 				90DA60ED2168F37100532646 /* Assets.xcassets in Resources */,
 				90DA60EB2168F37100532646 /* Main.storyboard in Resources */,
+				90D3A3DF2178C05F0096C895 /* PlayfairDisplay-Regular.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
