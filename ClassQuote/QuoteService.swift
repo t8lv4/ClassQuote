@@ -53,6 +53,7 @@ class QuoteService {
                 //call a task to get an image
                 self.getImage { (data) in
                     if let data = data {
+                        // create quote bundle
                         let quote = Quote(text: text, author: author, imageData: data)
                         callback(true, quote)
                     } else {
@@ -73,7 +74,7 @@ class QuoteService {
 
         //create body
         let body = "method=getQuote&format=json&lang=en"
-        //attach body to request and specifie the format of the data to be sent
+        //encode body using utf8 and attach it to request
         request.httpBody = body.data(using: .utf8)
 
         return request

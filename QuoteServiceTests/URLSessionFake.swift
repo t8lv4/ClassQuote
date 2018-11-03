@@ -8,12 +8,14 @@
 
 import Foundation
 
-// double URLSession to adress the test of dataTask(with url:...) and dataTask(with request:...)
+// double URLSession to adress dataTask(with url:...) and dataTask(with request:...) tests
 class URLSessionFake: URLSession {
-    //ocmpletion handler properties
+    //completion handler properties
     var data: Data?
     var response: URLResponse?
     var error: Error?
+
+    typealias CompletionHandler = (Data?, URLResponse?, Error?) -> Void
 
     init(data: Data?, response: URLResponse?, error: Error?) {
         self.data = data
@@ -21,7 +23,7 @@ class URLSessionFake: URLSession {
         self.error = error
     }
 
-    override func dataTask(with url: URL, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> URLSessionDataTask {
+    override func dataTask(with url: URL, completionHandler: @escaping CompletionHandler) -> URLSessionDataTask {
         let task = URLSessionDataTaskFake()
         task.completionHandler = completionHandler
         task.data = data
@@ -30,7 +32,7 @@ class URLSessionFake: URLSession {
         return task
     }
 
-    override func dataTask(with request: URLRequest, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> URLSessionDataTask {
+    override func dataTask(with request: URLRequest, completionHandler: @escaping CompletionHandler) -> URLSessionDataTask {
         let task = URLSessionDataTaskFake()
         task.completionHandler = completionHandler
         task.data = data
@@ -40,7 +42,7 @@ class URLSessionFake: URLSession {
     }
 }
 
-// double URLSessionDataTask to adress the tests of resume() and cancel()
+// double URLSessionDataTask to adress resume() and cancel() tests
 class URLSessionDataTaskFake: URLSessionDataTask {
     var completionHandler: ((Data?, URLResponse?, Error?) -> Void)?
     var data: Data?
